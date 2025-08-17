@@ -1,0 +1,123 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Custom animations and utilities */
+@layer utilities {
+  .bg-gradient-radial {
+    background: radial-gradient(circle at 20% 80%, rgba(255, 215, 0, 0.1) 0%, transparent 50%);
+  }
+  
+  .border-3 {
+    border-width: 3px;
+  }
+  
+  .animate-pulse-gold {
+    animation: pulse-gold 3s ease-in-out infinite;
+  }
+  
+  .animate-float {
+    animation: float 2s ease-in-out infinite;
+  }
+  
+  /* Additional gradient utilities */
+  .bg-radial-gold {
+    background: radial-gradient(circle, rgba(255, 215, 0, 0.2) 0%, rgba(255, 165, 0, 0.1) 50%, transparent 100%);
+  }
+}
+
+/* Custom keyframes */
+@keyframes pulse-gold {
+  0%, 100% {
+    transform: scale(1);
+    box-shadow: 0 0 20px rgba(255, 215, 0, 0.3);
+  }
+  50% {
+    transform: scale(1.05);
+    box-shadow: 0 0 40px rgba(255, 215, 0, 0.5);
+  }
+}
+
+@keyframes float {
+  0%, 100% {
+    transform: translateY(0px);
+  }
+  50% {
+    transform: translateY(-10px);
+  }
+}
+
+/* Enhanced pulse animation for decorative elements */
+@keyframes pulse {
+  0%, 100% {
+    opacity: 0.4;
+    transform: scale(1);
+  }
+  50% {
+    opacity: 0.8;
+    transform: scale(1.02);
+  }
+}
+
+/* Mobile responsive adjustments */
+@media (max-width: 1024px) {
+  .hero-section {
+    flex-direction: column !important;
+    padding: 3rem 1.5rem !important;
+    text-align: center !important;
+  }
+  
+  .hero-content {
+    margin-right: 0 !important;
+    margin-bottom: 3rem !important;
+    max-width: 100% !important;
+  }
+}
+
+@media (max-width: 768px) {
+  .hero-title {
+    font-size: 2.5rem !important;
+    line-height: 1.1 !important;
+  }
+  
+  .hero-actions {
+    flex-direction: column !important;
+  }
+  
+  nav {
+    flex-direction: row !important;
+    gap: 1rem !important;
+    padding: 1rem 1.5rem !important;
+  }
+  
+  .nav-menu {
+    display: none !important;
+  }
+  
+  .shilajit-visual {
+    width: 18rem !important;
+    height: 18rem !important;
+  }
+  
+  /* Mobile bottom banner */
+  .bottom-banner {
+    flex-direction: column !important;
+    gap: 0.5rem !important;
+    text-align: center !important;
+  }
+}
+
+@media (max-width: 640px) {
+  .hero-title {
+    font-size: 2rem !important;
+  }
+  
+  .hero-subtitle {
+    font-size: 1rem !important;
+  }
+  
+  .features-grid {
+    grid-template-columns: 1fr !important;
+    gap: 0.75rem !important;
+  }
+}
