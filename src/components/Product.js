@@ -1,7 +1,7 @@
 import React, { useState, useRef, useEffect } from 'react';
 import { motion } from 'framer-motion';
 import product1 from '../assets/product1.png';
-import product2 from '../assets/product2.png';
+import product2 from '../assets/product2.webp';
 import product3 from '../assets/productone.png';
 import fassi from '../assets/fssai-color.png';
 import gmp from '../assets/gmp.webp';
@@ -422,30 +422,6 @@ const Product = () => {
 
           </motion.div>
         </div>
-
-        {/* Professional Banner */}
-        <motion.div
-          initial={{ opacity: 0, y: 30 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true }}
-          className="relative rounded-3xl overflow-hidden"
-        >
-          <img 
-            src={banner2} 
-            alt="Sacred Karungali Heritage Collection" 
-            className="w-full h-48 md:h-64 object-cover"
-          />
-          <div className="absolute inset-0 bg-gradient-to-r from-black/70 via-black/30 to-black/70 flex items-center justify-center">
-            <div className="text-center space-y-4">
-              <h3 className="text-3xl md:text-5xl font-bold text-white font-serif tracking-tight">
-                Begin Your Sacred Journey
-              </h3>
-              <div className="w-16 h-px bg-amber-400 mx-auto"></div>
-              <p className="text-amber-200 text-lg tracking-wide">Blessed by Ancient Wisdom</p>
-            </div>
-          </div>
-        </motion.div>
-
       </div>
     </section>
   );
